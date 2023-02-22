@@ -21,6 +21,7 @@ library("Hmisc")
 library("corrplot")
 library("shinycssloaders")
 library("fs")
+library("dplyr")
 ##### Load and install shiny libraries alternative (not on shinyio) #####
 # Check if required packages are already installed, and install if missing
 packages <-
@@ -1247,7 +1248,8 @@ server <- function(input, output, session) {
         dec = ".",
         sep = "\t",
         row.names = 1,
-        comment.char = ""
+        comment.char = "",
+        stringsAsFactors = T
       )
     
     # Save the column names of the mapping file
@@ -2701,7 +2703,8 @@ server <- function(input, output, session) {
         dec = ".",
         sep = "\t",
         row.names = 1,
-        comment.char = ""
+        comment.char = "",
+        stringsAsFactors = T
       )
     
     setwd("../")
@@ -2742,7 +2745,7 @@ server <- function(input, output, session) {
     
     independant_variable_name <- input$sgcgroup
     
-    group_order <- input$grorder_order
+    group_order <- input$grorder_order$text
     
     abundance_cutoff <- input$abundance_cutoff
     
@@ -2874,7 +2877,8 @@ server <- function(input, output, session) {
         dec = ".",
         sep = "\t",
         row.names = 1,
-        comment.char = ""
+        comment.char = "",
+        stringsAsFactors = T
       )
     
     # Determine positions in table
