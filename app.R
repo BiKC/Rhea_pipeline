@@ -1,44 +1,37 @@
-library("shiny")
-library("shinyjqui")
-library("GUniFrac")
-library("vegan")
-library("ade4")
-library("phangorn")
-library("cluster")
-library("fpc")
-library("compare")
-library("plotrix")
-library("PerformanceAnalytics")
-library("reshape")
-library("ggplot2")
-library("gridExtra")
-library("grid")
-library("ggrepel")
-library("gtable")
-library("Matrix")
-library("cowplot")
-library("Hmisc")
-library("corrplot")
-library("shinycssloaders")
-library("fs")
-library("dplyr")
+# These library lines are required for shinyapps.io deployment
+
+# library("shiny")
+# library("shinyjqui")
+# library("GUniFrac")
+# library("vegan")
+# library("ade4")
+# library("phangorn")
+# library("cluster")
+# library("fpc")
+# library("compare")
+# library("plotrix")
+# library("PerformanceAnalytics")
+# library("reshape")
+# library("ggplot2")
+# library("gridExtra")
+# library("grid")
+# library("ggrepel")
+# library("gtable")
+# library("Matrix")
+# library("cowplot")
+# library("Hmisc")
+# library("corrplot")
+# library("shinycssloaders")
+# library("fs")
+# library("dplyr")
+
 ##### Load and install shiny libraries alternative (not on shinyio) #####
 # Check if required packages are already installed, and install if missing
 packages <-
-  c("shinyjqui",
-    "GUniFrac",
-    "vegan",
-    "ade4",
-    "phangorn",
-    "cluster",
-    "fpc",
-   "compare",
-"plotrix",
-"PerformanceAnalytics",
-"reshape",
-"ggplot2",
-"gridExtra",
-"grid","ggrepel","gtable","Matrix","cowplot","Hmisc","corrplot","shinycssloaders")
+  c("shinyjqui","GUniFrac","vegan","ade4","phangorn","cluster","fpc","compare",
+"plotrix","PerformanceAnalytics","reshape","ggplot2","gridExtra","grid",
+"ggrepel","gtable","Matrix","cowplot","Hmisc","corrplot","shinycssloaders","fs",
+"dplyr")
 
 # # Function to check whether the package is installed
 InsPack <- function(pack)
